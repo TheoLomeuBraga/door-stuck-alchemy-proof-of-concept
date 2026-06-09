@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://c7wcr8ds623ly"]
+
+[ext_resource type="Script" uid="uid://b4stu77bkm8ea" path="res://tests/test.gd" id="1_yggfj"]
+[ext_resource type="Script" uid="uid://dldgy68hb4bt6" path="res://geral_scripts/recipe.gd" id="2_7517i"]
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="2_eig8f"]
+[ext_resource type="PackedScene" uid="uid://c0ryu5uwklhgv" path="res://assets/gun_handle/handle_smal.tscn" id="3_ymr3d"]
+[ext_resource type="PackedScene" uid="uid://dbwwe4wykeoe4" path="res://assets/gun_handle/handle_mid.tscn" id="4_5fw7c"]
+[ext_resource type="PackedScene" uid="uid://8i3f4jqd14d6" path="res://assets/gun_handle/handle_big.tscn" id="5_7y2ik"]
+[ext_resource type="PackedScene" uid="uid://c2txdwnobf54c" path="res://assets/handles/handle_smal.tscn" id="6_vxaqg"]
+[ext_resource type="PackedScene" uid="uid://bqmpvhhwydk3f" path="res://assets/handles/handle_mid.tscn" id="7_x2dcf"]
+[ext_resource type="PackedScene" uid="uid://bvelbiewjgrit" path="res://assets/handles/handle_big.tscn" id="8_rj716"]
+
+[sub_resource type="Resource" id="Resource_72jlw"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+4: 3
+})
+model = ExtResource("5_7y2ik")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_qwp7r"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+4: 2
+})
+model = ExtResource("4_5fw7c")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_ry45r"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+4: 1
+})
+model = ExtResource("3_ymr3d")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_c4fah"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+5: 3
+})
+model = ExtResource("8_rj716")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_tipe3"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+5: 2
+})
+model = ExtResource("7_x2dcf")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_nsppo"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+5: 1
+})
+model = ExtResource("6_vxaqg")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eig8f"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7517i"]
+sky_material = SubResource("ProceduralSkyMaterial_eig8f")
+
+[sub_resource type="Environment" id="Environment_ry45r"]
+background_mode = 2
+sky = SubResource("Sky_7517i")
+tonemap_mode = 2
+
+[node name="Test" type="Node3D" unique_id=579007739]
+script = ExtResource("1_yggfj")
+recipes = Array[ExtResource("2_7517i")]([SubResource("Resource_72jlw"), SubResource("Resource_qwp7r"), SubResource("Resource_ry45r"), SubResource("Resource_c4fah"), SubResource("Resource_tipe3"), SubResource("Resource_nsppo")])
+test_recipe = Dictionary[int, int]({
+0: 0,
+1: 0,
+2: 0,
+3: 0,
+4: 3,
+5: 3,
+6: 0,
+7: 0,
+8: 0
+})
+
+[node name="model" type="Node3D" parent="." unique_id=1027251398 node_paths=PackedStringArray("next_slots")]
+script = ExtResource("2_eig8f")
+next_slots = [NodePath(".")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1204027100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=81843554]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, -3)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Camera3D" unique_id=1799103477]
+environment = SubResource("Environment_ry45r")

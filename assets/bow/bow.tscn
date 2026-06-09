@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c5l3p5naq4x2t"]
+
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="1_geklb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_geklb"]
+albedo_color = Color(0.54407835, 0.22127438, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e7cq5"]
+material = SubResource("StandardMaterial3D_geklb")
+size = Vector3(0.02, 0.5, 0.1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ovmi0"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 1.2
+
+[node name="Bow" type="Node3D" unique_id=2124554738]
+script = ExtResource("1_geklb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=770579301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21507224, 0, 0)
+mesh = SubResource("BoxMesh_e7cq5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=164753314]
+transform = Transform3D(0.8660254, -0.5, 0, 0.5, 0.8660254, 0, 0, 0, 1, -0.08854577, -0.44557542, 0)
+mesh = SubResource("BoxMesh_e7cq5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1221593336]
+transform = Transform3D(0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0, 1, -0.08810656, 0.44365153, 0)
+mesh = SubResource("BoxMesh_e7cq5")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1776972558]
+mesh = SubResource("CylinderMesh_ovmi0")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=412335345]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, -0.28819126)

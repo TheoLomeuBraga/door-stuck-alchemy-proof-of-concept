@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c0ryu5uwklhgv"]
+
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="1_71ul0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33su2"]
+albedo_color = Color(0.22074142, 0.17385846, 0.12953773, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ryyxr"]
+material = SubResource("StandardMaterial3D_33su2")
+size = Vector3(0.1, 0.4, 0.2)
+
+[node name="HandleSmall" type="Node3D" unique_id=1758534986 node_paths=PackedStringArray("next_slots")]
+script = ExtResource("1_71ul0")
+next_slots = [NodePath("Marker3D")]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=34018826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17542368, 0)
+mesh = SubResource("BoxMesh_ryyxr")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=932487558]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.37832814, 0)

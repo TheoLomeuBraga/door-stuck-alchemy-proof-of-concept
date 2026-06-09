@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cf42dqjo6uib4"]
+
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="1_5ssrq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpw88"]
+albedo_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rd06y"]
+material = SubResource("StandardMaterial3D_wpw88")
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Cube" type="Node3D" unique_id=778373575 node_paths=PackedStringArray("next_slots")]
+script = ExtResource("1_5ssrq")
+next_slots = [NodePath("Marker3D"), NodePath("Marker3D2"), NodePath("Marker3D3"), NodePath("Marker3D4"), NodePath("Marker3D5")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=632971253]
+mesh = SubResource("BoxMesh_rd06y")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1667922657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24563575, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="." unique_id=1883408831]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.2453835, -0.0072593093, 0)
+
+[node name="Marker3D3" type="Marker3D" parent="." unique_id=2144740525]
+transform = Transform3D(-8.881784e-16, 2.9802322e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 2.9802322e-08, -0.00037628412, -0.0072593093, 0.24783087)
+
+[node name="Marker3D4" type="Marker3D" parent="." unique_id=573690373]
+transform = Transform3D(4.371139e-08, -1, 8.742278e-08, -1, -4.371139e-08, 0, 3.821371e-15, -8.742278e-08, -1, -0.24528289, -0.0072593093, -0.0043076724)
+
+[node name="Marker3D5" type="Marker3D" parent="." unique_id=808852950]
+transform = Transform3D(-2.9331925e-15, 5.7620454e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, 5.7620454e-08, 0.00047689676, -0.0072593093, -0.25213856)

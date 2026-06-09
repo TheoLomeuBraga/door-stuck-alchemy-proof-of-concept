@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c2txdwnobf54c"]
+
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="1_vtxuq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sq3cj"]
+albedo_color = Color(0.36880842, 0.11266851, 7.219613e-08, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vtxuq"]
+material = SubResource("StandardMaterial3D_sq3cj")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.5
+
+[node name="Handle" type="Node3D" unique_id=97019955 node_paths=PackedStringArray("next_slots")]
+script = ExtResource("1_vtxuq")
+next_slots = [NodePath("Marker3D")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1987363105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21054304, 0)
+mesh = SubResource("CylinderMesh_vtxuq")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1172523710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4287206, 0)

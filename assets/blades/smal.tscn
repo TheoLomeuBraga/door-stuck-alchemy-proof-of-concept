@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dh41npf5r6ba5"]
+
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="1_c65it"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fw7cg"]
+albedo_color = Color(0.32172796, 0.32172796, 0.32172796, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hg6qu"]
+material = SubResource("StandardMaterial3D_fw7cg")
+size = Vector3(0.1, 0.5, 0.01)
+
+[node name="Smal" type="Node3D" unique_id=1154088364]
+script = ExtResource("1_c65it")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=40169304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22889489, 0)
+mesh = SubResource("BoxMesh_hg6qu")

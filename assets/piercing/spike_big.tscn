@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dhkx1ovrl8vkf"]
+
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="1_sh6lr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drbcx"]
+albedo_color = Color(0.32172796, 0.32172796, 0.32172796, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wv3p6"]
+material = SubResource("StandardMaterial3D_drbcx")
+top_radius = 0.0
+bottom_radius = 0.1
+height = 1.0
+
+[node name="SpikeSmall" type="Node3D" unique_id=329547629]
+script = ExtResource("1_sh6lr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=424941476]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.49937114, 0.06213811, 0)
+mesh = SubResource("CylinderMesh_wv3p6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1029434304]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -0.5006288, 0.06213811, 0)
+mesh = SubResource("CylinderMesh_wv3p6")

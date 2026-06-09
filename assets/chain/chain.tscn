@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://qwoqcuei42a0"]
+
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="1_hnmkt"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7jmw5"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 1.0
+
+[node name="Chain" type="Node3D" unique_id=1407354873]
+script = ExtResource("1_hnmkt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1002268327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48362434, 0)
+mesh = SubResource("CylinderMesh_7jmw5")

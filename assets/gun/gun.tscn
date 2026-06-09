@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cfe7dp6mltnlc"]
+
+[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="1_danae"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_danae"]
+albedo_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_40bau"]
+material = SubResource("StandardMaterial3D_danae")
+size = Vector3(0.2, 0.5, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrmjy"]
+albedo_color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_idm4r"]
+material = SubResource("StandardMaterial3D_nrmjy")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.2
+
+[node name="Gun" type="Node3D" unique_id=1812196183 node_paths=PackedStringArray("next_slots")]
+script = ExtResource("1_danae")
+next_slots = [NodePath("Marker3D")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1324408446]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0.2366741, -0.08034277)
+mesh = SubResource("BoxMesh_40bau")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=628939690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0032499991, 0.47712457, -0.11227191)
+mesh = SubResource("CylinderMesh_idm4r")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=34240764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4344918, 0)
