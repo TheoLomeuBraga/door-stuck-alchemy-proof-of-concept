@@ -10,6 +10,17 @@
 [ext_resource type="PackedScene" uid="uid://c2txdwnobf54c" path="res://assets/handles/handle_smal.tscn" id="6_vxaqg"]
 [ext_resource type="PackedScene" uid="uid://bqmpvhhwydk3f" path="res://assets/handles/handle_mid.tscn" id="7_x2dcf"]
 [ext_resource type="PackedScene" uid="uid://bvelbiewjgrit" path="res://assets/handles/handle_big.tscn" id="8_rj716"]
+[ext_resource type="PackedScene" uid="uid://qwoqcuei42a0" path="res://assets/chain/chain.tscn" id="10_7y2ik"]
+[ext_resource type="PackedScene" uid="uid://cf42dqjo6uib4" path="res://assets/shapes/cube.tscn" id="11_x2dcf"]
+[ext_resource type="PackedScene" uid="uid://dbcfck0gqedcl" path="res://assets/shapes/sphere.tscn" id="12_rj716"]
+[ext_resource type="PackedScene" uid="uid://chm3tpqeoqjkx" path="res://assets/cross_bow/cross_bow.tscn" id="13_rj716"]
+[ext_resource type="PackedScene" uid="uid://cfe7dp6mltnlc" path="res://assets/gun/gun.tscn" id="14_qwp7r"]
+[ext_resource type="PackedScene" uid="uid://b2g27b3kxaf3r" path="res://assets/blades/big.tscn" id="15_tipe3"]
+[ext_resource type="PackedScene" uid="uid://cxe1uo6kawniu" path="res://assets/blades/mid.tscn" id="16_c4fah"]
+[ext_resource type="PackedScene" uid="uid://dh41npf5r6ba5" path="res://assets/blades/smal.tscn" id="17_0neaq"]
+[ext_resource type="PackedScene" uid="uid://dhkx1ovrl8vkf" path="res://assets/piercing/spike_big.tscn" id="18_hbe7f"]
+[ext_resource type="PackedScene" uid="uid://cidg56kmsltpb" path="res://assets/piercing/spike_mid.tscn" id="19_a8d8l"]
+[ext_resource type="PackedScene" uid="uid://cm13ubrx028sk" path="res://assets/piercing/spike_small.tscn" id="20_bgr6y"]
 
 [sub_resource type="Resource" id="Resource_ymr3d"]
 script = ExtResource("2_7517i")
@@ -68,6 +79,96 @@ requirements = Dictionary[int, int]({
 model = ExtResource("6_vxaqg")
 metadata/_custom_type_script = "uid://dldgy68hb4bt6"
 
+[sub_resource type="Resource" id="Resource_5fw7c"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+2: 1
+})
+model = ExtResource("10_7y2ik")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_0neaq"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+8: 1
+})
+model = ExtResource("11_x2dcf")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_hbe7f"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+7: 1
+})
+model = ExtResource("12_rj716")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_a8d8l"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+1: 1,
+3: 1
+})
+model = ExtResource("13_rj716")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_bgr6y"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+1: 0,
+3: 1
+})
+model = ExtResource("14_qwp7r")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_030s3"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+0: 3
+})
+model = ExtResource("15_tipe3")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_7mvmr"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+0: 2
+})
+model = ExtResource("16_c4fah")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_ouqjy"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+0: 1
+})
+model = ExtResource("17_0neaq")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_hqfpk"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+6: 3
+})
+model = ExtResource("18_hbe7f")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_nrrvg"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+6: 2
+})
+model = ExtResource("19_a8d8l")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
+[sub_resource type="Resource" id="Resource_46wbb"]
+script = ExtResource("2_7517i")
+requirements = Dictionary[int, int]({
+6: 1
+})
+model = ExtResource("20_bgr6y")
+metadata/_custom_type_script = "uid://dldgy68hb4bt6"
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eig8f"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -82,15 +183,15 @@ tonemap_mode = 2
 
 [node name="Test" type="Node3D" unique_id=579007739]
 script = ExtResource("1_yggfj")
-recipes = Array[ExtResource("2_7517i")]([SubResource("Resource_ymr3d"), SubResource("Resource_72jlw"), SubResource("Resource_qwp7r"), SubResource("Resource_ry45r"), SubResource("Resource_c4fah"), SubResource("Resource_tipe3"), SubResource("Resource_nsppo")])
+recipes = Array[ExtResource("2_7517i")]([SubResource("Resource_ymr3d"), SubResource("Resource_72jlw"), SubResource("Resource_qwp7r"), SubResource("Resource_ry45r"), SubResource("Resource_c4fah"), SubResource("Resource_tipe3"), SubResource("Resource_nsppo"), SubResource("Resource_5fw7c"), SubResource("Resource_0neaq"), SubResource("Resource_hbe7f"), SubResource("Resource_a8d8l"), SubResource("Resource_bgr6y"), SubResource("Resource_030s3"), SubResource("Resource_7mvmr"), SubResource("Resource_ouqjy"), SubResource("Resource_hqfpk"), SubResource("Resource_nrrvg"), SubResource("Resource_46wbb")])
 test_recipe = Dictionary[int, int]({
 0: 0,
-1: 1,
+1: 0,
 2: 0,
 3: 0,
-4: 3,
-5: 3,
-6: 0,
+4: 0,
+5: 2,
+6: 3,
 7: 0,
 8: 0
 })

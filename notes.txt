@@ -1,10 +1,10 @@
 bow - V
 gun handle - V
 handle - V
-chain
-cross bow
-gun
-cube
-sphere
-blade
-spike
+chain - V
+cube - V
+sphere - V
+cross bow - V
+gun - V
+blade - V
+spike - V

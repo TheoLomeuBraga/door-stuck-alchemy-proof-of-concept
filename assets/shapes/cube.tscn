@@ -17,16 +17,16 @@ next_slots = [NodePath("Marker3D"), NodePath("Marker3D2"), NodePath("Marker3D3")
 mesh = SubResource("BoxMesh_rd06y")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1667922657]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24563575, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.24563575, 0)
 
 [node name="Marker3D2" type="Marker3D" parent="." unique_id=1883408831]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.2453835, -0.0072593093, 0)
+transform = Transform3D(-3.4969112e-08, 0.8, 0, -0.8, -3.4969112e-08, 0, 0, 0, 0.8, 0.2453835, -0.0072593093, 0)
 
 [node name="Marker3D3" type="Marker3D" parent="." unique_id=2144740525]
-transform = Transform3D(-8.881784e-16, 2.9802322e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 2.9802322e-08, -0.00037628412, -0.0072593093, 0.24783087)
+transform = Transform3D(1.8601663e-15, -3.4969112e-08, -0.8, -0.8, -3.4969112e-08, -3.3161798e-16, -3.4969112e-08, 0.8, -3.4969112e-08, -0.00037628412, -0.0072593093, 0.24783087)
 
 [node name="Marker3D4" type="Marker3D" parent="." unique_id=573690373]
-transform = Transform3D(4.371139e-08, -1, 8.742278e-08, -1, -4.371139e-08, 0, 3.821371e-15, -8.742278e-08, -1, -0.24528289, -0.0072593093, -0.0043076724)
+transform = Transform3D(3.4969112e-08, -0.8, 1.2079664e-07, -0.8, -3.4969112e-08, 0, 5.280189e-15, -1.2079664e-07, -0.8, -0.24528289, -0.0072593093, -0.0043076724)
 
 [node name="Marker3D5" type="Marker3D" parent="." unique_id=808852950]
-transform = Transform3D(-2.9331925e-15, 5.7620454e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, 5.7620454e-08, 0.00047689676, -0.0072593093, -0.25213856)
+transform = Transform3D(-2.9717124e-15, 6.039832e-08, 0.8, -0.8, -3.4969112e-08, -3.3161798e-16, 3.4969112e-08, -0.8, 6.039832e-08, 0.00047689676, -0.0072593093, -0.25213856)
