@@ -9,9 +9,13 @@ albedo_color = Color(0.32172796, 0.32172796, 0.32172796, 1)
 material = SubResource("StandardMaterial3D_fw7cg")
 size = Vector3(0.1, 0.5, 0.01)
 
-[node name="Smal" type="Node3D" unique_id=1154088364]
+[node name="Smal" type="Node3D" unique_id=1154088364 node_paths=PackedStringArray("next_slots")]
 script = ExtResource("1_c65it")
+next_slots = [NodePath("Marker3D")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=40169304]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22889489, 0)
 mesh = SubResource("BoxMesh_hg6qu")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=496825669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47629517, 0)

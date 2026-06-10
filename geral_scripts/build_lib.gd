@@ -38,38 +38,29 @@ static func add_recipe(requirements : Dictionary[Ingredient,int],model : PackedS
 static func is_recipe_suported(inventory:Dictionary[Ingredient,int],recipe:Dictionary[Ingredient,int]) -> bool:
 	
 	for i : Ingredient in recipe:
-		if not inventory.has(i) or not recipe.has(i):
-			return false
+		if recipe.has(i) and not inventory.has(i):
+			inventory[i] = 0
 		if inventory.has(i) and recipe.has(i) and inventory[i] != recipe[i]:
 			return false
 	
 	return true
 
-static func clean_recipe(a:Dictionary[Ingredient,int]) -> Dictionary[Ingredient,int]:
-	var ret : Dictionary[Ingredient,int]
-	for i : Ingredient in a:
-		if a[i] > 0:
-			ret[i] = a[i]
-	return ret
-
 static func subtract_recipe(inventory:Dictionary[Ingredient,int],recipe:Dictionary[Ingredient,int]) -> Dictionary[Ingredient,int]:
-	
 	
 	var ret : Dictionary[Ingredient,int] = inventory.duplicate()
 	for i : Ingredient in recipe:
 		if ret.has(i) and recipe.has(i):
 			ret[i] -= recipe[i]
-	return clean_recipe(ret)
+	return ret
 
 static func get_compatible_recipe(recipe:Dictionary[Ingredient,int]) -> Recipe:
 	for r : Recipe in recipes:
 		if is_recipe_suported(recipe,r.requirements):
-			print(r.model.resource_path)
 			return r
 	return null
 
 static func build(part:ItemPart,recipe:Dictionary[Ingredient,int]) -> void:
-	var current_recipe : Dictionary[Ingredient,int] = clean_recipe(recipe)
+	var current_recipe : Dictionary[Ingredient,int] = recipe
 	var next_slots : Array[ItemPart] = [part]
 	
 	while true:

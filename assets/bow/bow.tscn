@@ -14,8 +14,9 @@ top_radius = 0.01
 bottom_radius = 0.01
 height = 1.2
 
-[node name="Bow" type="Node3D" unique_id=2124554738]
+[node name="Bow" type="Node3D" unique_id=2124554738 node_paths=PackedStringArray("next_slots")]
 script = ExtResource("1_geklb")
+next_slots = [NodePath("Marker3D")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=770579301]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21507224, 0, 0)
@@ -33,4 +34,4 @@ mesh = SubResource("BoxMesh_e7cq5")
 mesh = SubResource("CylinderMesh_ovmi0")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=412335345]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, -0.28819126)
+transform = Transform3D(4.3711392e-08, -4.3711392e-08, -1, -4.3711385e-08, 1, -4.3711392e-08, 1, 4.371139e-08, 4.371139e-08, 0, 0, -0.28819126)

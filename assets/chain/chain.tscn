@@ -7,9 +7,33 @@ top_radius = 0.01
 bottom_radius = 0.01
 height = 1.0
 
+[sub_resource type="Curve3D" id="Curve3D_hnmkt"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.00475958, -0.011898932, 0, 0, 0, 0, 0, 0, 0, 0.20116305, 0.19110493, 0, 0, 0, 0, 0, 0, 0, -0.19864857, 0.29420108, 0, 0, 0, 0, 0, 0, 0, 0.1332705, 0.54565495, 0, 0, 0, 0, 0, 0, 0, -0.2464248, 0.70407087, 0, 0, 0, 0, 0, 0, 0, 0.1835612, 0.76693434, 0, 0, 0, 0, 0, 0, 0, -0.0025144815, 0.9882138, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
 [node name="Chain" type="Node3D" unique_id=1407354873]
 script = ExtResource("1_hnmkt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1002268327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48362434, 0)
 mesh = SubResource("CylinderMesh_7jmw5")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=275891856]
+polygon = PackedVector2Array(0, 0, 0, 0.01, 0.01, 0.01, 0.01, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 1
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="CSGPolygon3D" unique_id=1299633712]
+curve = SubResource("Curve3D_hnmkt")
