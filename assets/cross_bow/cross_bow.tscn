@@ -50,4 +50,4 @@ transform = Transform3D(-0.50000006, 0.8660254, 0, -0.8660254, -0.50000006, 0, 0
 mesh = SubResource("BoxMesh_4mj7b")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1300430608]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11148274, -0.18852729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46890706, 0.013214916)

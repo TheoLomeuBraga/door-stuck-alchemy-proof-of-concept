@@ -34,4 +34,4 @@ mesh = SubResource("BoxMesh_e7cq5")
 mesh = SubResource("CylinderMesh_ovmi0")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=412335345]
-transform = Transform3D(4.3711392e-08, -4.3711392e-08, -1, -4.3711385e-08, 1, -4.3711392e-08, 1, 4.371139e-08, 4.371139e-08, 0, 0, -0.28819126)
+transform = Transform3D(4.371138e-08, -1, 8.742278e-08, 4.37114e-08, -8.742278e-08, -1, 1, 4.371139e-08, 4.371139e-08, 0, 0, -0.28819126)

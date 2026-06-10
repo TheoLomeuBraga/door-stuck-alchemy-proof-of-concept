@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b4stu77bkm8ea" path="res://tests/test.gd" id="1_yggfj"]
 [ext_resource type="Script" uid="uid://dldgy68hb4bt6" path="res://geral_scripts/recipe.gd" id="2_7517i"]
-[ext_resource type="Script" uid="uid://kru8xuyp87mb" path="res://geral_scripts/item_part.gd" id="2_eig8f"]
 [ext_resource type="PackedScene" uid="uid://c5l3p5naq4x2t" path="res://assets/bow/bow.tscn" id="3_5fw7c"]
 [ext_resource type="PackedScene" uid="uid://c0ryu5uwklhgv" path="res://assets/gun_handle/handle_smal.tscn" id="3_ymr3d"]
 [ext_resource type="PackedScene" uid="uid://dbwwe4wykeoe4" path="res://assets/gun_handle/handle_mid.tscn" id="4_5fw7c"]
@@ -177,28 +176,21 @@ ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 sky_material = SubResource("ProceduralSkyMaterial_eig8f")
 
 [sub_resource type="Environment" id="Environment_ry45r"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.2784314, 0.4862745, 0.4862745, 1)
 sky = SubResource("Sky_7517i")
+ambient_light_source = 2
+ambient_light_color = Color(0.47788018, 0.47788012, 0.47788012, 1)
 tonemap_mode = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hbe7f"]
 
 [node name="Test" type="Node3D" unique_id=579007739]
 script = ExtResource("1_yggfj")
 recipes = Array[ExtResource("2_7517i")]([SubResource("Resource_ymr3d"), SubResource("Resource_72jlw"), SubResource("Resource_qwp7r"), SubResource("Resource_ry45r"), SubResource("Resource_c4fah"), SubResource("Resource_tipe3"), SubResource("Resource_nsppo"), SubResource("Resource_5fw7c"), SubResource("Resource_0neaq"), SubResource("Resource_hbe7f"), SubResource("Resource_a8d8l"), SubResource("Resource_bgr6y"), SubResource("Resource_030s3"), SubResource("Resource_7mvmr"), SubResource("Resource_ouqjy"), SubResource("Resource_hqfpk"), SubResource("Resource_nrrvg"), SubResource("Resource_46wbb")])
-test_recipe = Dictionary[int, int]({
-0: 0,
-1: 0,
-2: 0,
-3: 0,
-4: 0,
-5: 2,
-6: 3,
-7: 0,
-8: 0
-})
 
-[node name="model" type="Node3D" parent="." unique_id=1027251398 node_paths=PackedStringArray("next_slots")]
-script = ExtResource("2_eig8f")
-next_slots = [NodePath(".")]
+[node name="model" type="Node3D" parent="." unique_id=1027251398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1204027100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
@@ -210,3 +202,56 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Camera3D" unique_id=1799103477]
 environment = SubResource("Environment_ry45r")
+
+[node name="Control" type="Control" parent="." unique_id=281080875]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=8913604]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.735
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.27996826
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel" unique_id=2093958992]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Panel/HBoxContainer" unique_id=1696461831]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/HBoxContainer/ScrollContainer" unique_id=808249773]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/HBoxContainer/ScrollContainer/VBoxContainer" unique_id=1641006999]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/HBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=922075444]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "aaa"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Control/Panel/HBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=1354990112]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+
+[node name="VSeparator" type="VSeparator" parent="Control/Panel/HBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=751343773]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxTexture_hbe7f")
